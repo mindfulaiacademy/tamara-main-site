@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Toolkit is Ready | Enhance by Tamara</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Enhance by Tamara</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navMenu" role="list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="work-with-me.html">Work With Me</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li>
+        <a href="https://calendly.com/enhancebytamara/meet-with-tamara"
+           target="_blank" rel="noopener" class="nav-cta btn">Book a Call</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── THANK YOU ── -->
+  <section class="hero-centered" aria-label="Thank you">
+    <span class="label">Your free resource</span>
+    <h1>Your toolkit is ready.</h1>
+    <div class="hero-rule"></div>
+    <p>Download the Executive Nervous System Toolkit below. Three breathing protocols, a morning regulation check-in, and Tamara's recommended reading — no fluff, no app required.</p>
+    <div class="hero-btns">
+      <a href="/nervous-system-toolkit.pdf" download class="btn btn-dark">Download Toolkit (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ── NEXT STEP ── -->
+  <section class="section section-alt" aria-label="Next step">
+    <div class="inner" style="text-align: center;">
+      <span class="label label-muted">What's next</span>
+      <h2 style="margin: 1.25rem 0;">Ready to go deeper?</h2>
+      <p>If what you read resonates — a free 30-minute call with Tamara is the natural next step. No pitch. Just a conversation about where you are and what might help.</p>
+      <a href="https://calendly.com/enhancebytamara/meet-with-tamara"
+         target="_blank" rel="noopener"
+         class="btn btn-dark" style="margin-top: 2rem;">Book a Free Call</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Enhance by Tamara</div>
+        <p class="footer-tagline">Breathwork and nervous system regulation for leaders and professionals. Online, worldwide.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work-with-me.html">Work With Me</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="https://corporate.enhancebytamara.com" target="_blank" rel="noopener">Executive Programme</a></li>
+        </ul>
+      </nav>
+      <div class="footer-nav">
+        <h4>Connect</h4>
+        <ul role="list">
+          <li><a href="https://calendly.com/enhancebytamara/meet-with-tamara" target="_blank" rel="noopener">Book a Call</a></li>
+          <li><a href="https://www.linkedin.com/in/tamara-korstick-871780378" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/enhance_by.tamara/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Enhance by Tamara. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/tamara-korstick-871780378" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/enhance_by.tamara/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+    }
+  </script>
+
+</body>
+</html>
