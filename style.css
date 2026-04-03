@@ -98,12 +98,16 @@ p { font-size: 0.95rem; line-height: 1.8; }
 }
 
 .nav-logo {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--text);
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+}
+
+.nav-logo-img {
+  height: clamp(44px, 4.5vw, 72px);
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
 }
 
 .nav-links {
@@ -207,26 +211,55 @@ p { font-size: 0.95rem; line-height: 1.8; }
 /* ── HERO ────────────────────────────────────────── */
 
 .hero {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 4rem 6rem;
+  padding: 9rem 5rem 6rem 7rem;
 }
 
-.hero-text .label { margin-bottom: 1.75rem; }
-.hero-text h1     { margin-bottom: 1.5rem; }
-.hero-text p      { margin-bottom: 2.5rem; max-width: 460px; color: var(--text-muted); }
+.hero-text .label     { margin-bottom: 1.75rem; }
+.hero-text h1         { margin-bottom: 1.5rem; font-size: clamp(1.9rem, 3.2vw, 2.9rem); }
+.hero-text .hero-rule {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 1.5rem 0 2rem;
+  flex-shrink: 0;
+}
+.hero-text p          { margin-bottom: 2.5rem; max-width: 420px; color: var(--text-muted); }
 
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-.hero-image { position: relative; overflow: hidden; }
-.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.hero-image {
+  padding: 2rem 4rem 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-frame {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  max-height: 68vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
 
 /* ── PAGE HERO ───────────────────────────────────── */
 
@@ -693,9 +726,11 @@ p { font-size: 0.95rem; line-height: 1.8; }
   .nav-links a { font-size: 1.1rem; }
 
   /* Hero */
-  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero { grid-template-columns: 1fr; min-height: auto; align-items: start; }
   .hero-text { padding: 7rem 1.5rem 3rem; }
-  .hero-image { height: 65vw; min-height: 260px; max-height: 400px; }
+  .hero-text h1 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+  .hero-image { padding: 0 1.25rem 2rem; }
+  .hero-frame { max-width: 100%; max-height: 70vw; aspect-ratio: 4 / 3; }
 
   /* Sections */
   .section { padding: var(--space-xl) 1.25rem; }
