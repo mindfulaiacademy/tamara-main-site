@@ -23,7 +23,9 @@
 
   <!-- ── NAV ── -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Enhance by Tamara</a>
+    <a href="index.html" class="nav-logo">
+      <img src="photos/logo enhance by tamara.png" alt="Enhance by Tamara" class="nav-logo-img">
+    </a>
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav(this)">
       <span></span><span></span><span></span>
     </button>
@@ -45,8 +47,93 @@
     <p>Workshops, online sessions, and immersive experiences - a lower-commitment starting point for those who want to experience nervous system regulation before committing to a longer programme.</p>
   </div>
 
-  <!-- ── PHOTO PLACEHOLDER ── -->
-  <div class="ph ph--medium" data-label="Photo - Tamara facilitating"></div>
+  <!-- ── EVENTS GALLERY ── -->
+  <style>
+    .gallery-wrap {
+      position: relative;
+    }
+    .gallery-strip {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .gallery-strip::-webkit-scrollbar { display: none; }
+    .gallery-item {
+      flex: 0 0 85vw;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      scroll-snap-align: start;
+    }
+    @media (min-width: 600px) {
+      .gallery-item { flex: 0 0 45vw; }
+    }
+    @media (min-width: 900px) {
+      .gallery-item { flex: 0 0 30vw; }
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-btn {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+    .gallery-btn:hover { background: #fff; }
+    .gallery-btn--prev { left: 0.75rem; }
+    .gallery-btn--next { right: 0.75rem; }
+    @media (hover: hover) {
+      .gallery-btn { display: flex; }
+    }
+  </style>
+  <section aria-label="Photos from past events">
+    <div class="gallery-wrap">
+    <button class="gallery-btn gallery-btn--prev" aria-label="Previous photo" onclick="galleryScroll(-1)">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 3L5 8l5 5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="gallery-btn gallery-btn--next" aria-label="Next photo" onclick="galleryScroll(1)">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M6 3l5 5-5 5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="gallery-strip" id="galleryStrip">
+      <div class="gallery-item"><img src="photos/events/event%20WhatsApp%20Image%202026-04-02%20at%2010.09.11%20(1).jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%20WhatsApp%20Image%202026-04-02%20at%2010.09.11.jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%20WhatsApp%20Image%202026-04-02%20at%2010.09.11%20(2).jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%203.jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%204.jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%20WhatsApp%20Image%202026-04-02%20at%2014.17.30%20.jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%20WhatsApp%20Image%202026-04-02%20at%2014.17.30%205.jpeg" alt="Past event" loading="lazy"></div>
+      <div class="gallery-item"><img src="photos/events/event%201.jpeg" alt="Past event" loading="lazy"></div>
+    </div>
+    </div>
+  </section>
+  <script>
+    function galleryScroll(dir) {
+      const strip = document.getElementById('galleryStrip');
+      const itemWidth = strip.querySelector('.gallery-item').offsetWidth + 4;
+      strip.scrollBy({ left: dir * itemWidth, behavior: 'smooth' });
+    }
+  </script>
 
   <!-- ── UPCOMING EVENT ── -->
   <section class="section" aria-label="Upcoming events">
@@ -118,6 +205,18 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ── EVENT VIDEO ── -->
+  <section aria-label="Event video" style="display:flex; justify-content:center; padding: 3rem 1rem;">
+    <video
+      src="photos/events/event%20WhatsApp%20Video%202026-04-02%20at%2014.18.37.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      style="display:block; width:100%; max-width:400px; height:auto;">
+    </video>
   </section>
 
   <!-- ── CLOSING CTA ── -->
