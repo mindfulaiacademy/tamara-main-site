@@ -15,17 +15,105 @@
   <meta name="description" content="Tamara Korstick works with leaders, professionals, and anyone who has outpaced their own nervous system. Structured breathwork and somatic regulation, delivered online.">
   <link rel="canonical" href="https://enhancebytamara.com/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="author" content="Tamara Korstick">
+  <meta name="theme-color" content="#1a1a1a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Enhance by Tamara">
+  <meta property="og:title" content="Enhance by Tamara | Breathwork &amp; Nervous System Regulation">
+  <meta property="og:description" content="Tamara Korstick works with leaders, professionals, and anyone who has outpaced their own nervous system. Structured breathwork and somatic regulation, delivered online.">
+  <meta property="og:url" content="https://enhancebytamara.com/">
+  <meta property="og:image" content="https://enhancebytamara.com/photos/3%204%20aspect%20ratio%20-%20tamara%20dubai.png">
+  <meta property="og:image:alt" content="Tamara Korstick, breathwork facilitator based in Dubai">
+  <meta property="og:locale" content="en_GB">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enhance by Tamara | Breathwork &amp; Nervous System Regulation">
+  <meta name="twitter:description" content="Tamara Korstick works with leaders, professionals, and anyone who has outpaced their own nervous system. Structured breathwork and somatic regulation, delivered online.">
+  <meta name="twitter:image" content="https://enhancebytamara.com/photos/3%204%20aspect%20ratio%20-%20tamara%20dubai.png">
+  <meta name="twitter:image:alt" content="Tamara Korstick, breathwork facilitator based in Dubai">
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="photos/3 4 aspect ratio - tamara dubai.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://enhancebytamara.com/#website",
+        "url": "https://enhancebytamara.com/",
+        "name": "Enhance by Tamara",
+        "description": "Breathwork and nervous system regulation for leaders and professionals"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://enhancebytamara.com/#tamara",
+        "name": "Tamara Korstick",
+        "jobTitle": "Breathwork Facilitator and Nervous System Regulation Coach",
+        "description": "Certified Oxygen Advantage Instructor and 9D Breathwork Facilitator based in Dubai since 2015. Works with leaders and professionals online, worldwide.",
+        "url": "https://enhancebytamara.com/about.html",
+        "image": "https://enhancebytamara.com/photos/3%204%20aspect%20ratio%20-%20tamara%20dubai.png",
+        "email": "contact@coffeewithtamara.com",
+        "knowsLanguage": ["en", "de"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/tamara-korstick-871780378",
+          "https://www.instagram.com/enhance_by.tamara/"
+        ]
+      },
+      {
+        "@type": "HealthAndBeautyBusiness",
+        "@id": "https://enhancebytamara.com/#business",
+        "name": "Enhance by Tamara",
+        "url": "https://enhancebytamara.com/",
+        "description": "Breathwork and nervous system regulation for leaders and professionals. Online, worldwide.",
+        "founder": { "@id": "https://enhancebytamara.com/#tamara" },
+        "email": "contact@coffeewithtamara.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Breathwork Sessions" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nervous System Regulation Coaching" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Mastery Programme" } }
+          ]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/tamara-korstick-871780378",
+          "https://www.instagram.com/enhance_by.tamara/"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- ── NAV ── -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="nav-logo">
-      <img src="photos/logo enhance by tamara.png" alt="Enhance by Tamara" class="nav-logo-img">
+      <img src="photos/logo enhance by tamara.png" alt="Enhance by Tamara" class="nav-logo-img" loading="eager">
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav(this)">
       <span></span><span></span><span></span>
@@ -55,7 +143,7 @@
     </div>
     <div class="hero-image">
       <div class="hero-frame">
-        <img src="photos/3 4 aspect ratio - tamara dubai.png" alt="Tamara Korstick, breathwork facilitator, Dubai">
+        <img src="photos/3 4 aspect ratio - tamara dubai.png" alt="Tamara Korstick, breathwork facilitator, Dubai" width="600" height="800" fetchpriority="high">
       </div>
     </div>
   </section>
